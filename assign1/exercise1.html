@@ -1,0 +1,40 @@
+<!--
+  Dajun Gu
+  CS465 HW 1
+  10/9/2019
+-->
+
+<head>
+  <title>
+    HTML Form
+  </title>
+</head>
+
+<body>
+  <h1>HTML Form (Dajun Gu)</h1>
+  <form>
+    <p>First name: <input type="text" id="firstn"></p>
+    <p>Last name: <input type="text" id="lastn"></p>
+    <p>E-mail: <input type="text" id="email"></p>
+    <input type="radio" name="graduate" id="under">Undergraduate Student<br>
+    <input type="radio" name="graduate" id="gradu">Graduate Student<br><br>
+    <input id="submit" type="submit" value="Submit">
+    <input type="button" onclick="resetform()" value="Reset">
+  </form>
+  <!-- <button onclick="resetform()">Reset</button> -->
+
+  <script>
+    function resetform() {
+      document.getElementById("firstn").value = "";
+      document.getElementById("lastn").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("under").checked = false;
+      document.getElementById("gradu").checked = false;
+    }
+
+    document.getElementById("submit").addEventListener("click", function () {
+      alert("Submit success");
+      return false;
+    });
+  </script>
+</body>

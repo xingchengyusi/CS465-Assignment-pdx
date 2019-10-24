@@ -1,0 +1,91 @@
+<!--
+  Dajun Gu
+  CS465 HW 1
+  10/9/2019
+-->
+
+<head>
+  <title>Dajun Gu</title>
+</head>
+
+<body>
+  <header id="#home">
+    <h1 >Dajun Gu</h1>
+    <nav>
+      <ol>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#photo">Photo</a>
+        </li>
+        <li>
+          <a href="#bio">Biograph</a>
+        </li>
+        <li>
+          <a href="#projects">Previous Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ol>
+    </nav>
+  </header>
+
+  <section id="#photo">
+    <h2>Photo</h2>
+    <img src="" alt="self-photo">
+  </section>
+
+  <section id="#bio">
+    <h2>Biograph</h2>
+    <p>Dajun Gu is a computer science student in Portland State University. In 2019, I am a junior and plan to graduate in summer 2020. I like computer science, swimming, hiking, and natural studies. AI is one of my favorite area in cs and I hope learn more and more so that I can use it to help people. Hiking and swimming are two sports I like, I have been swimming for 11 years. Until now, I still enjory it. People have been learn form nature in the history, explore the scenery I have never seen before interested me.</p>
+    <p>There are some pictures in hiking routes.</p>
+  </section>
+  
+  <section id="#projects">
+    <h2>Previous Projects</h2>
+      <h3>Web Game</h3>
+        <p>This is a web game build by JavaScript.</p>
+  </section>
+
+  <section id="#contact">
+    <h2>Contact</h2>
+    <p>Below is my contact info.</p>
+    <table id="mycontact" border="1">
+      <tbody>
+        <tr>
+          <td>E-mail</td>
+          <td>gdajun@pdx.edu</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td><a href="https://github.com/xingchengyusi">https://github.com/xingchengyusi</a></td>
+        </tr>
+        <tr>
+          <td>Personal Blog</td>
+          <td><a href="https://xingchengyusi.github.io/">https://xingchengyusi.github.io/</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If you want to contact with me:</p>
+    <form id="contactme">
+      <p>Name: <input type="text" id="name"></p>
+      <p>E-mail: <input type="text" id="email"></p>
+      <input id="submit" type="submit" value="Submit">
+      <input type="button" onclick="resetform()" value="Reset">
+    </form>
+  </section>
+  
+    <script>
+    function resetform() {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+    }
+
+    document.getElementById("submit").addEventListener("click", function () {
+      alert("Submit success");
+      return false;
+    });
+  </script>
+</body>
