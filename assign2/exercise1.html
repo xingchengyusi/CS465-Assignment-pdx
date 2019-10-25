@@ -1,0 +1,36 @@
+<!--
+  Dajun Gu
+  CS465 HW 2
+  10/20/2019
+-->
+
+<head>
+  <title>CONTACT US</title>
+  <link rel="stylesheet" ref="exercise1.css">
+</head>
+
+<body>
+  <div class="contact_box">
+    <div class="title">CONTACT US</div><br>
+    <form>
+      <div><input class="text" type="text" id="firstn" placeholder="Name"></div>
+      <div><input class="text" type="text" id="email" placeholder="Email"></div>
+      <div><textarea class="text textarea" id="comment" row="6" clos="50"></textarea></div>
+      <input class="button" id="submit" type="submit" value="SUBMIT">
+      <input class="button" type="button" onclick="resetform()" value="RESET">
+    </form>
+  </div>
+  <!-- <button onclick="resetform()">Reset</button> -->
+
+  <script>
+    function resetform() {
+      document.getElementById("firstn").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("comment").value = "";
+    }
+    document.getElementById("submit").addEventListener("click", function () {
+      alert("Submit success");
+      return false;
+    });
+  </script>
+</body>
