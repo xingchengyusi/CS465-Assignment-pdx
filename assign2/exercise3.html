@@ -60,7 +60,7 @@
       </tbody>
     </table>
     <p>If you want to contact with me:</p>
-    <form id="contactme">
+    <form id="contactme" onsubmit="printinfo(); return false;">
       <p>Name: <input type="text" id="name"></p>
       <p>E-mail: <input type="text" id="email"></p>
       <input class="input_button" id="submit" type="submit" value="Submit">
@@ -74,9 +74,8 @@
       document.getElementById("email").value = "";
     }
 
-    document.getElementById("submit").addEventListener("click", function () {
-      alert("Submit success");
+    function printinfo() {
       return false;
-    });
+    }
   </script>
 </body>

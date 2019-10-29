@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Reverse Num</title>
+  </head>
+  
+  <body>
+    <h1>Reverse Num</h1>
+    <p>This is a JS program, please go to console.</p>
+    <form onsubmit="reverse(); return false;">
+      <input id="number" type="test" placeholder="input number">
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </body>
+
+  <script>
+    function reverse() {
+      let x = document.getElementById("number").value;
+      x = parseInt(x.split("").reverse().join(""));
+      console.log(x);
+      return false;
+    }
+  </script>
+</html>

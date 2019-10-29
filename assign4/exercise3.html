@@ -1,0 +1,51 @@
+<!--
+  Dajun Gu
+  CS465 HW 2
+  10/23/2019
+-->
+
+<head>
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  
+  <body>
+    <div class="border container p-4 w-50 mt-5">
+      <h3 class="text-center">CONTACT US</h3>
+      <form onsubmit="printinfo(); return false;">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        
+        <div class="form-group">
+          <label for="comment">Comment</label>
+          <textarea class="form-control" rows="6" id="comment"></textarea>
+        </div>
+  
+        <input id="submit" class="btn btn-primary" type="submit" value="Submit">
+        <input id="reset" class="btn btn-secondary" type="reset" value="Reset">
+      </form>
+    </div>
+
+    <script>
+      function resetform() {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("comment").value = "";
+      }
+
+      function printinfo() {
+        console.log("name: " + document.getElementById("name").value);
+        console.log("email: " + document.getElementById("email").value);
+        console.log("message: " + document.getElementById("comment").value)
+        return false;
+      }
+    </script>
+  </body>
+  
