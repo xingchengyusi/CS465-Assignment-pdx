@@ -9,7 +9,7 @@
   <title>W and H</title>
 </head>
   
-  <body onresize='resize();return false;'>
+  <body onresize="resize(); return false;">
     <h1>This page output current screen size.</h1>
   
     <p>Width: <div id='width'></div></p>
@@ -18,13 +18,12 @@
   </body>
 
 <script>
-  document.getElementById('width').innerHTML = screen.width;
-  document.getElementById('height').innerHTML = screen.height;
+  document.getElementById('width').innerHTML = window.innerWidth;
+    document.getElementById('height').innerHTML = window.innerHeight;
   
   function resize() {
-    document.getElementById('width').innerHTML = screen.width;
-    document.getElementById('height').innerHTML = screen.height;
-    return false;
+    document.getElementById('width').innerHTML = window.innerWidth;
+    document.getElementById('height').innerHTML = window.innerHeight;
   }
 </script>
 </html>
