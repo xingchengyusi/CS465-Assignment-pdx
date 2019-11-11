@@ -1,0 +1,29 @@
+<!--
+  Dajun Gu
+  CS465 HW 2
+  10/23/2019
+-->
+
+<html>
+<head>
+</head>
+  
+  <body onresize='resize();return false;'>
+    <h1>This page output current screen size.</h1>
+  
+    <p>Width: <div id='width'></div></p>
+    <p>Height: <div id='height'></div></p>
+
+  </body>
+
+<script>
+  document.getElementById('width').innerHTML = screen.width;
+  document.getElementById('height').innerHTML = screen.height;
+  
+  function resize() {
+    document.getElementById('width').innerHTML = screen.width;
+    document.getElementById('height').innerHTML = screen.height;
+    return false;
+  }
+</script>
+</html>
