@@ -1,0 +1,30 @@
+<!--
+  Dajun Gu
+  CS465 HW 2
+  10/23/2019
+-->
+
+<html>
+  <head>
+    <title>Random Color</title>
+    
+    <style>
+      .button {
+        background: transparent;
+        border: none;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <button value="Random Color" onclick="random_color(); return false;" class="button">Random Color</button>
+  </body>
+  
+  <script>
+    function random_color() {
+      let color = Math.floor(Math.random() * 16777215).toString(16);
+      color = "#" + ("000000" + color).slice(-6);
+      document.bgColor = color;
+    }
+  </script>
+</html>
