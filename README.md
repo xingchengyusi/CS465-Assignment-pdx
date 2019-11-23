@@ -23,3 +23,5 @@ For the exercise 3 to 7:
 ## Week 6
 
 The file `introtoreact.js` is a finished code for Intro to React.
+
+The file `codelab.ts` is a finished code for Intro to TypeScript.
