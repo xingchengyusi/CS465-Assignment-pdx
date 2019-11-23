@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 5</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 5fr 1fr;
+            grid-template-columns: 1fr 9fr;
+            grid-template-areas: 'a a' 'b c' 'd d';
+            grid-gap: 0.5rem;
+        }
+
+        .item {
+            background: gray;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            color: white;
+        }
+
+        .i-1 {grid-area: a;}
+
+        .i-2 {grid-area: b;}
+
+        .i-3 {grid-area: c;}
+
+        .i-4 {grid-area: d;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item i-1">One</div>
+    <div class="item i-2">Two</div>
+    <div class="item i-3">Three</div>
+    <div class="item i-4">Four</div>
+</div>
+</body>
+</html>

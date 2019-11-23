@@ -4,13 +4,14 @@
   10/23/2019
 -->
 
-<head>
+<html>
+  <head>
     <title>CONTACT US</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  
+
   <body>
-    <div class="border container p-4 w-50 mt-5">
+    <div class="border container p-5 w-50 mt-5">
       <h3 class="text-center">CONTACT US</h3>
       <form onsubmit="printinfo(); return false;">
         <div class="form-group">
@@ -29,7 +30,7 @@
         </div>
   
         <input id="submit" class="btn btn-primary" type="submit" value="Submit">
-        <input id="reset" class="btn btn-secondary" type="reset" value="Reset">
+        <input id="reset" class="btn btn-secondary" type="reset" value="Reset" onclick="resetform();return false;">
       </form>
     </div>
 
@@ -48,4 +49,4 @@
       }
     </script>
   </body>
-  
+</html>

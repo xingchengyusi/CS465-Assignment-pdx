@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 1</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .item {
+            padding: 2rem;
+            width: auto;
+            height: 7rem;
+            background: gray;
+            border-radius: 0.4rem;
+            flex-grow: 1;
+            margin: 0 1rem 1rem 1rem;
+        }
+
+        .subcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="subcontainer">
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+    </div>
+    <div class="subcontainer">
+        <div class="item">Five</div>
+        <div class="item">Six</div>
+        <div class="item">Seven</div>
+        <div class="item">Eight</div>
+    </div>
+    <div class="subcontainer">
+        <div class="item">Nine</div>
+        <div class="item">Ten</div>
+        <div class="item">Eleven</div>
+        <div class="item">Twelve</div>
+    </div>
+</div>
+</body>
+</html>

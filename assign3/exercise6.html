@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 4</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 5fr 1fr 1fr 1fr;
+            grid-template-areas: "one two" "one three" "one four" "five five";
+            grid-gap: 0.5rem;
+        }
+
+        .item {
+            background: gray;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            color: white;
+        }
+
+        .one {grid-area: one}
+        .two {grid-area: two}
+        .three {grid-area: three}
+        .four {grid-area: four}
+        .five {grid-area: five}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="one item">One</div>
+    <div class="two item">Two</div>
+    <div class="three item">Three</div>
+    <div class="four item">Four</div>
+    <div class="five item">Five</div>
+</div>
+</body>
+</html>
