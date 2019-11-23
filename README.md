@@ -25,3 +25,5 @@ For the exercise 3 to 7:
 The file `introtoreact.js` is a finished code for Intro to React.
 
 The file `codelab.ts` is a finished code for Intro to TypeScript.
+
+All the file in floder `angular` are the finished code for Augular Web app.
