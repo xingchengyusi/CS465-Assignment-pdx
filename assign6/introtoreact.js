@@ -35,29 +35,32 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
-    constructor() {
+    constructor(props) {
         super(props);
         this.state = {
-            history: [{
-                squares: Array(9).fill(null),
-            }],
+            history: [{squares: Array(9).fill(null)}],
             stepNumber: 0,
-            xIsNext: true,
+            xIsNext: true
         };
     }
 
     handleClick(i) {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
-        const squares = this.state.squares.slice();
-        if (this.knowwinner(squares) || squares[i]){
+        const current = history[history.length - 1];
+        const squares = current.squares.slice();
+        if (calculateWinner(squares) || squares[i]) {
             return;
         }
-        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        squares[i] = this.state.xIsNext ? "X" : "O";
         this.setState({
-            squares: squares,
+            history: history.concat([
+                {
+                    squares: squares
+                }
+            ]),
+            stepNumber: history.length,
+            xIsNext: !this.state.xIsNext
         });
-        stepNumber: history.length;
-        xIsNext: !this.state.xIsNext;
     }
 
     jumpTo(step) {
@@ -70,7 +73,7 @@ class Game extends React.Component {
     render() {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
-        let winner = this.knowwinner(this.state.squares);
+        let winner = this.knowwinner(current.squares);
 
         const moves = history.map((step, move) => {
             const desc = move ?
