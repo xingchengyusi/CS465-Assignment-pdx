@@ -12,6 +12,10 @@ app.get('/submit', function(req, res, next) {
     res.end();
 });
 
+app.listen(3000, function() {
+    console.log('Server running at http://127.0.0.1:8080/');
+  });
+
 // app.get('/', (req, res) => res.send('Hello World!'));
 
 // app.listen(3000, () => console.log('Example app listening on port 3000!'));
